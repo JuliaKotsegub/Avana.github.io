@@ -20,6 +20,15 @@
     --company-name: linear-gradient(174.91deg, rgba(255, 255, 255, 0.5) 6.88%, rgba(0, 0, 0, 0) 152.87%);
     --blur: #2A4AC8;
     --benefit: rgba(45, 45, 52, 0.3);
+    --buy-box: #18181C;
+    --text-white: #fff;
+   --copi-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+        --footer-title: #F2F4F7;
+        --footer-bg: #050810;
 
 /* Light mode */
     --title-color: #344054;
@@ -30,7 +39,9 @@
     --name-color: linear-gradient( rgba(65, 74, 87, 0.25), rgba(255, 255, 255, 0.13));  
 --benefit-block:#EAECF0;
 --network-text: #fff;
-
+--box-buy: #F4F4F5;
+--footer: #475467;
+--bg-footer: #FAFAFA;
 }
 
 .light{
@@ -46,6 +57,11 @@
     --p-text:var(--text-color);
     --benefit: var(--benefit-block);
     --network-text: var(--white);
+    --buy-box:var(--box-buy);
+    --text-white:var(--text-color);
+    --copi-shadow:0;
+    --footer-title: var(--footer);
+    --footer-bg: var(--bg-footer);
 }
 
 body.light {
@@ -172,12 +188,12 @@ body {
 .logo {
     width: 103px;
     height: 28px;
-    display: flex;align-items: center;
+    display: flex;
+    align-items: center;
     gap: 8px;
     font-size: 20px;
     font-weight: 600;
     color: var(--nav);
-
 }
 
 .nav-list {
@@ -629,7 +645,7 @@ tecnology-info_title,
     font-family: 'SF Pro Text';
     font-weight: 400;
     font-size: 14px;
-    color: var(--white);
+    color: var( --text-white);
     padding-bottom: 8px;
 }
 
@@ -637,7 +653,7 @@ tecnology-info_title,
     font-family: 'SF Pro Text';
     font-weight: 500;
     font-size: 24px;
-    color: var(--white);
+    color: var( --text-white);
 }
 
 .card-group {
@@ -686,7 +702,7 @@ tecnology-info_title,
     display: flex;
     width: 343px;
     height: 74px;
-    background: #18181C;
+    background: var(--buy-box);
     border-radius: 15px;
     padding: 12px;
     gap: 24px;
@@ -731,7 +747,7 @@ tecnology-info_title,
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    color: var(--white);
+    color: var(--nav-color);
 }
 
 .box-name__subtitle {
@@ -973,7 +989,7 @@ tecnology-info_title,
 
 .footer {
     position: relative;
-    background-color: var(--dark-bg);
+    background-color: var(--footer-bg);
 }
 
 .footer__desc {
@@ -1000,11 +1016,7 @@ tecnology-info_title,
     font-size: 14px;
     line-height: 130%;
     color: var(--color-text);
-    text-shadow:
-        -1px -1px 0 black,
-        1px -1px 0 black,
-        -1px 1px 0 black,
-        1px 1px 0 black;
+    text-shadow:var(--copi-shadow);
 }
 
 .footer__links {
@@ -1033,13 +1045,13 @@ tecnology-info_title,
 .footer-title {
     font-weight: 600;
     font-size: 18px;
-    color: var(--text-subtitle);
+    color: var(--footer-title);
 }
 
 .footer__social {
     font-weight: 400;
     font-size: 14px;
-    color: #D0D5DD;
+    color: var(--footer-title);
 
 }
 
