@@ -4,7 +4,7 @@
 
 
 :root {
-/* Dark mode */
+    /* Dark mode */
     --black: #000;
     --white: #ffffff;
     --white-title: #F9FAFB;
@@ -14,7 +14,7 @@
     --text-subtitle: #F2F4F7;
     --p-text: #D0D5DD;
     --hover: #2A4AC8;
-    --nav:#fff;
+    --nav: #fff;
     --gradient: linear-gradient(126deg, rgba(41, 59, 107, 1) 0%, rgba(113, 79, 153, 1) 7%, rgba(166, 98, 159, 1) 13%, rgba(151, 86, 120, 1) 19%, rgba(163, 45, 95, 1) 27%, rgba(115, 25, 77, 1) 34%, rgba(67, 15, 54, 1) 40%, rgba(5, 8, 17, 1) 49%, rgba(5, 8, 17, 1) 100%);
     --btn: #fff;
     --company-name: linear-gradient(174.91deg, rgba(255, 255, 255, 0.5) 6.88%, rgba(0, 0, 0, 0) 152.87%);
@@ -22,55 +22,54 @@
     --benefit: rgba(45, 45, 52, 0.3);
     --buy-box: #18181C;
     --text-white: #fff;
-   --copi-shadow:
+    --copi-shadow:
         -1px -1px 0 black,
         1px -1px 0 black,
         -1px 1px 0 black,
         1px 1px 0 black;
-        --footer-title: #F2F4F7;
-        --footer-bg: #050810;
+    --footer-title: #F2F4F7;
+    --footer-bg: #050810;
+    --footer-svg: #F2F4F7;
 
-/* Light mode */
+    /* Light mode */
     --title-color: #344054;
     --text-color: #475467;
     --nav-color: #344054;
     --white: #ffffff;
     --btn-color: #fff;
-    --name-color: linear-gradient( rgba(65, 74, 87, 0.25), rgba(255, 255, 255, 0.13));  
---benefit-block:#EAECF0;
---network-text: #fff;
---box-buy: #F4F4F5;
---footer: #475467;
---bg-footer: #FAFAFA;
+    --name-color: linear-gradient(rgba(65, 74, 87, 0.25), rgba(255, 255, 255, 0.13));
+    --benefit-block: #EAECF0;
+    --network-text: #fff;
+    --box-buy: #F4F4F5;
+    --footer: #475467;
+    --bg-footer: #FAFAFA;
 }
 
-.light{
+
+.light {
     --dark-bg: var(--white);
     --white-title: var(--title-color);
     --color-text: var(--text-color);
-    --nav: var(--nav-color); 
-    --gradient:var(--white);
-    --btn:var(--btn-color);
-    --text-subtitle:var(--text-color);
-    --company-name:var(--name-color);
-    --blur:var(--white);
-    --p-text:var(--text-color);
+    --nav: var(--nav-color);
+    --gradient: var(--white);
+    --btn: var(--btn-color);
+    --text-subtitle: var(--text-color);
+    --company-name: var(--name-color);
+    --blur: var(--white);
+    --p-text: var(--text-color);
     --benefit: var(--benefit-block);
     --network-text: var(--white);
-    --buy-box:var(--box-buy);
-    --text-white:var(--text-color);
-    --copi-shadow:0;
+    --buy-box: var(--box-buy);
+    --text-white: var(--text-color);
+    --copi-shadow: 0;
     --footer-title: var(--footer);
     --footer-bg: var(--bg-footer);
+    --footer-svg: var(--nav);
 }
 
 body.light {
-    background-color: var(--white); /* Встановлюємо фоновий колір для світлої теми */
-    animation: none; /* Вимикаємо анімацію для світлої теми */
- }
-
-.tecnology-img{
-    
+    background-color: var(--white);
+    animation: none;
 }
 
 html,
@@ -161,7 +160,7 @@ body {
 
 /* Nav */
 
-.none{
+.none {
     display: none;
 }
 
@@ -173,7 +172,7 @@ body {
 .nav-login__item:hover,
 .nav-list__item:hover {
     color: var(--hover);
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 }
 
 .nav-row {
@@ -224,13 +223,13 @@ body {
     align-items: center;
     width: 72px;
     height: 40px;
-    background: #292FDE; 
+    background: #292FDE;
     padding: 4px;
     border-radius: 24px;
 
 }
 
-.dark-mode-btn::before{
+.dark-mode-btn::before {
     content: "";
     position: absolute;
     top: 4px;
@@ -243,10 +242,11 @@ body {
     transform: left 2s ease-in;
 }
 
-.dark-mode-btn--active::before{
+.dark-mode-btn--active::before {
     left: 36px;
 }
-.dark-mode-btn--active{
+
+.dark-mode-btn--active {
     background: #D0D5DD;
 }
 
@@ -255,13 +255,30 @@ body {
     width: 16px;
     height: 16px;
     z-index: 4;
-    margin-left: 8px; 
+    margin-left: 8px;
     margin-right: 8px;
 }
 
+.active-icon {
+    opacity: 1;
+}
+
+.light .active-icon {
+    opacity: 0;
+}
+
+.dark-icon {
+    opacity: 0;
+}
+
+.light .dark-icon {
+    opacity: 1;
+}
+
+
 .mode {
-   width: 13px;
-   height: 18px;
+    width: 13px;
+    height: 18px;
 }
 
 
@@ -273,7 +290,7 @@ body {
     background: var(--gradient);
     background-size: 200% 200%;
     animation: waveAnimation 14s ease-in-out infinite;
-    
+
 }
 
 @keyframes waveAnimation {
@@ -426,7 +443,7 @@ body {
 /* NAME BLOCK  */
 
 
-.name-company{
+.name-company {
     text-align: center;
     background: var(--company-name);
     -webkit-background-clip: text;
@@ -481,6 +498,7 @@ tecnology-info_title,
     letter-spacing: 0.135em;
     text-transform: uppercase;
     color: var(--white-title);
+    padding-top: 278px;
 
 }
 
@@ -572,7 +590,7 @@ tecnology-info_title,
 
 .reason-block:hover {
     box-shadow: 0px 0px 10px rgba(255, 254, 254, 0.3);
-    transition: box-shadow 0.3s ease-in;
+    transition: box-shadow 0.5s ease-in;
     transform: scale(1.1);
 }
 
@@ -645,7 +663,7 @@ tecnology-info_title,
     font-family: 'SF Pro Text';
     font-weight: 400;
     font-size: 14px;
-    color: var( --text-white);
+    color: var(--text-white);
     padding-bottom: 8px;
 }
 
@@ -653,7 +671,7 @@ tecnology-info_title,
     font-family: 'SF Pro Text';
     font-weight: 500;
     font-size: 24px;
-    color: var( --text-white);
+    color: var(--text-white);
 }
 
 .card-group {
@@ -712,7 +730,7 @@ tecnology-info_title,
 
 .buy-box:hover {
     box-shadow: 0px 0px 10px rgba(255, 254, 254, 0.3);
-    transition: box-shadow 0.1s ease;
+    transition: box-shadow 0.5s ease;
     transform: scale(1.1);
 }
 
@@ -823,7 +841,7 @@ tecnology-info_title,
 
 .benefit-block__info:hover {
     box-shadow: 0px 0px 10px rgba(255, 254, 254, 0.3);
-    transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.5s ease-in;
     transform: scale(1.1);
 }
 
@@ -914,6 +932,7 @@ tecnology-info_title,
     word-wrap: break-word;
     text-align: left;
     color: var(--network-text);
+    padding-top: 0;
 }
 
 .network-application__grid {
@@ -1016,7 +1035,7 @@ tecnology-info_title,
     font-size: 14px;
     line-height: 130%;
     color: var(--color-text);
-    text-shadow:var(--copi-shadow);
+    text-shadow: var(--copi-shadow);
 }
 
 .footer__links {
@@ -1039,7 +1058,7 @@ tecnology-info_title,
 
 .footer__links ul li:hover {
     color: var(--hover);
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 }
 
 .footer-title {
@@ -1083,5 +1102,11 @@ tecnology-info_title,
 .footer__social__networks {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    text-align: center;
     gap: 20px;
+}
+
+.footer-svg {
+    fill: var(--footer-svg);
 }

@@ -14,6 +14,7 @@ function sendEmail() {
     window.location.href = 'mailto:' + emailAddress;
   }
 
+
   const btnDarkMode=document.querySelector(".dark-mode-btn");
 
   btnDarkMode.onclick = function(){
